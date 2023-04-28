@@ -132,15 +132,15 @@ Als deze draait, zie je dit met
 $ kubectl get all -o wide
 
 NAME                             READY   STATUS    RESTARTS   AGE   IP           NODE    NOMINATED NODE   READINESS GATES
-pod/hello-app-85d64585f9-hx774   1/1     Running   0          48m   10.244.1.5   spock   <none>           <none>
-pod/hello-app-85d64585f9-w2fvw   1/1     Running   0          48m   10.244.2.5   kirk    <none>           <none>
-pod/nginx-95f4c5857-f7g8n        1/1     Running   3          48d   10.244.2.3   kirk    <none>           <none>
-pod/nginx-95f4c5857-qpmf7        1/1     Running   3          48d   10.244.1.3   spock   <none>           <none>
+pod/hello-app-85d64585f9-hx774   1/1     Running   0          48m   10.xxxxxxx   spock   <none>           <none>
+pod/hello-app-85d64585f9-w2fvw   1/1     Running   0          48m   10.xxxxxxx   kirk    <none>           <none>
+pod/nginx-95f4c5857-f7g8n        1/1     Running   3          48d   10.xxxxxxx   kirk    <none>           <none>
+pod/nginx-95f4c5857-qpmf7        1/1     Running   3          48d   10.xxxxxxx   spock   <none>           <none>
 
 NAME                    TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)           AGE   SELECTOR
-service/hello-app-lb    LoadBalancer   10.100.240.107   <pending>     12345:32078/TCP   48m   app=hello-app
-service/kubernetes      ClusterIP      10.96.0.1        <none>        443/TCP           98d   <none>
-service/nginx-service   NodePort       10.98.82.185     <none>        80:30800/TCP      48d   app=nginx
+service/hello-app-lb    LoadBalancer   10.xxxxxxxxxxx   <pending>     12345:32078/TCP   48m   app=hello-app
+service/kubernetes      ClusterIP      10.xxxxxxx       <none>        443/TCP           98d   <none>
+service/nginx-service   NodePort       10.xxxxxxxxx     <none>        80:30800/TCP      48d   app=nginx
 
 NAME                        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                              SELECTOR
 deployment.apps/hello-app   2/2     2            2           48m   hello-app    lister1308/python-hello-app:0.0.1   app=hello-app
