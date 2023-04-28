@@ -13,7 +13,7 @@ De volgende stappen gevolgd om eerst een flask python applicatie te maken en dez
 
 Flask applicatie
 Aanmaken van een simpele flask applicatie
-
+<pre>
 $ mkdir python-hello-app
 $ cd python-hello-app
 $ python -m venv .venv
@@ -38,6 +38,7 @@ export FLASK_ENV=development
 python3 hello.py
 
 $ run.sh
+</pre>
 Je kan daarna testen door naar poort 12345 te connecten met je webbrowser of middels curl en dan krijg je de tekst "Hello World from Flask!" te zien. Hierna gaan we dit omzetten naar een docker image
 
 Docker image
