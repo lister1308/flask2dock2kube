@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-app
+spec:
+  selector:
+    matchLabels:
+      app: hello-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hello-app
+    spec:
+      containers:
+      - name: hello-app
+        image: lister1308/python-hello-app:latest
+        imagePullPolicy: Always
+        ports:
+        - name: hello-app
+          containerPort: 12345
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-app-lb
+  labels:
+    app: hello-app
+  annotations:
+    service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
+    service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "100"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 12345
+  selector:
+    app: hello-app
