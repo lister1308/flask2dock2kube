@@ -99,7 +99,7 @@ spec:
       containers:
       - name: hello-app
         image: lister1308/python-hello-app:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - name: hello-app
           containerPort: 12345
