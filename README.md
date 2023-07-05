@@ -13,7 +13,7 @@ De volgende stappen gevolgd om eerst een flask python applicatie te maken en dez
 
 <h3>Flask applicatie</h3>
 Aanmaken van een simpele flask applicatie
-<pre>
+<code>
 from flask import Flask
 import platform
 
@@ -33,7 +33,7 @@ export FLASK_ENV=development
 python3 hello.py
 
 $ run.sh
-</pre><br>
+</code><br>
 Je kan daarna testen door naar poort 12345 te connecten met je webbrowser of middels curl en dan krijg je de tekst "Hello World from Flask!" te zien. Hierna gaan we dit omzetten naar een docker image
 
 <h3>Docker image</h3>
